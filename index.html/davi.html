@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi Script Key KK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 5em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="texto">...</h1>
+
+    <script>
+        // Lista de palavras para alternar
+        const palavras = ["davi", "script", "key", "kk"];
+        const textoElement = document.getElementById("texto");
+
+        // Gera um índice aleatório
+        function getRandomIndex() {
+            return Math.floor(Math.random() * palavras.length);
+        }
+
+        // Atualiza o texto na tela
+        function updateText() {
+            const randomIndex = getRandomIndex();
+            textoElement.textContent = palavras[randomIndex];
+        }
+
+        // Executa quando a página carrega
+        window.onload = updateText;
+    </script>
+</body>
+</html>
